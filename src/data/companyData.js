@@ -36,7 +36,7 @@ export const COMPANY_INFO = {
         "Airport-to-destination coordination",
         "Flexible shipping solutions"
       ],
-      image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=1200&q=80"
     },
     {
       id: "sea-freight",
