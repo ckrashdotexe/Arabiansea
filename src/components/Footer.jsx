@@ -1,9 +1,18 @@
 import React from 'react';
-import { MapPin, Phone, Printer, ArrowUpRight } from 'lucide-react';
+import { MapPin, Phone, Printer, ArrowUpRight, Clock } from 'lucide-react';
 import Logo from './Logo';
 import { COMPANY_INFO } from '../data/companyData';
 
 export default function Footer({ onOpenQuote }) {
+  const handleQuoteClick = () => {
+    const el = document.getElementById('quote-enquiry');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else if (onOpenQuote) {
+      onOpenQuote();
+    }
+  };
+
   return (
     <footer className="footer-fullscreen">
       <div className="container-full">
@@ -35,9 +44,9 @@ export default function Footer({ onOpenQuote }) {
             </ul>
           </div>
 
-          {/* Dubai Branch Office (Official Card Details) */}
+          {/* Dubai Corporate Headquarters (Official Card Details) */}
           <div>
-            <h4 style={{ color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 800, marginBottom: '1.4rem' }}>Dubai Branch</h4>
+            <h4 style={{ color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 800, marginBottom: '1.4rem' }}>Dubai Headquarters</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.88rem', color: 'var(--text-muted)' }}>
               <div>
                 <MapPin size={15} style={{ color: 'var(--ascs-red)', marginRight: '0.4rem', display: 'inline' }} />
@@ -57,27 +66,22 @@ export default function Footer({ onOpenQuote }) {
             </div>
           </div>
 
-          {/* Sharjah Head Office */}
+          {/* Direct Commercial Quote Desk */}
           <div>
-            <h4 style={{ color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 800, marginBottom: '1.4rem' }}>Sharjah Office</h4>
+            <h4 style={{ color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 800, marginBottom: '1.4rem' }}>Direct Dispatch Desk</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', fontSize: '0.88rem', color: 'var(--text-muted)' }}>
               <div>
-                <MapPin size={15} style={{ color: 'var(--ascs-red)', marginRight: '0.4rem', display: 'inline' }} />
-                {COMPANY_INFO.offices.sharjah.address}
+                <Clock size={15} style={{ color: 'var(--ascs-red)', marginRight: '0.4rem', display: 'inline' }} />
+                {COMPANY_INFO.workingHours}
               </div>
-              <div>
-                <Phone size={15} style={{ color: 'var(--ascs-red)', marginRight: '0.4rem', display: 'inline' }} />
-                Tel: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.sharjah.phone}</strong>
-              </div>
-              <div>
-                <Printer size={15} style={{ color: 'var(--ascs-red)', marginRight: '0.4rem', display: 'inline' }} />
-                Fax: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.sharjah.fax}</strong>
-              </div>
+              <p style={{ fontSize: '0.84rem', color: 'var(--text-dim)', lineHeight: '1.5' }}>
+                Reach our Dubai commercial operations desk directly for urgent air, ocean, and express parcel rates.
+              </p>
               <div style={{ marginTop: '0.6rem' }}>
                 <button 
                   className="btn-ascs-red" 
                   style={{ padding: '0.55rem 1.2rem', fontSize: '0.82rem' }}
-                  onClick={onOpenQuote}
+                  onClick={handleQuoteClick}
                 >
                   Request Rate Quote <ArrowUpRight size={14} />
                 </button>

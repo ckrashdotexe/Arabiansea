@@ -6,22 +6,16 @@ export const COMPANY_INFO = {
   tagline: "Connecting the Gulf to the World with Sovereign Precision.",
   shortName: "ASCS",
 
-  // Official Offices in UAE
+  // Official Headquarters in UAE
   offices: {
     dubai: {
-      name: "Dubai Branch Office",
+      name: "Dubai Corporate Headquarters",
       address: "Naif St, Deira, Dubai, United Arab Emirates",
       poBox: "P.O. Box: 27597, Dubai, UAE",
       phone: "04-2729388",
       phoneIntl: "+971 4 272 9388",
       fax: "04-2725233",
       faxIntl: "+971 4 272 5233"
-    },
-    sharjah: {
-      name: "Sharjah Head Office",
-      address: "205, Petrofac House, Al Soor, Sharjah, United Arab Emirates",
-      phone: "+971 6 568 6515",
-      fax: "+971 6 5686414"
     }
   },
 
@@ -110,8 +104,8 @@ export const COMPANY_INFO = {
     },
     {
       icon: "MapPin",
-      title: "UAE Dual Presence",
-      description: "Dubai (Naif St) & Sharjah (Petrofac House)"
+      title: "Dubai Operations Hub",
+      description: "Naif St, Deira, Dubai, UAE"
     }
   ]
 };

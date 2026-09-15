@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, MapPin, Globe, ShieldCheck, Compass, Anchor } from 'lucide-react';
+import { ArrowRight, MapPin, Globe } from 'lucide-react';
 import Logo from './Logo';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -7,6 +7,15 @@ export default function Hero({ onOpenQuote }) {
   const scrollToServices = () => {
     const el = document.getElementById('services');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleQuoteClick = () => {
+    const el = document.getElementById('quote-enquiry');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else if (onOpenQuote) {
+      onOpenQuote();
+    }
   };
 
   return (
@@ -54,7 +63,7 @@ export default function Hero({ onOpenQuote }) {
 
           {/* Primary Call-to-Action Group */}
           <div className="hero-cta-row">
-            <button className="btn-ascs-red" onClick={onOpenQuote}>
+            <button className="btn-ascs-red" onClick={handleQuoteClick}>
               Request a Quote <ArrowRight size={18} />
             </button>
 
@@ -63,15 +72,11 @@ export default function Hero({ onOpenQuote }) {
             </button>
           </div>
 
-          {/* Official Presence Badges (Dubai & Sharjah) */}
+          {/* Official Presence Badge (Dubai Headquarters) */}
           <div className="hero-offices-badge-row">
             <span className="hero-office-pill">
               <MapPin size={14} style={{ color: 'var(--ascs-red)' }} />
-              Dubai: Naif St, Deira (Tel: {COMPANY_INFO.offices.dubai.phone})
-            </span>
-            <span className="hero-office-pill">
-              <MapPin size={14} style={{ color: 'var(--ascs-red)' }} />
-              Sharjah: Petrofac House, Al Soor (Tel: {COMPANY_INFO.offices.sharjah.phone})
+              Dubai Headquarters: Naif St, Deira | Tel: {COMPANY_INFO.offices.dubai.phone}
             </span>
           </div>
         </div>

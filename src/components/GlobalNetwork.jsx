@@ -18,7 +18,7 @@ export default function GlobalNetwork() {
             GLOBAL CONNECTIVITY
           </div>
           <h2>From the UAE to Global Trade Corridors.</h2>
-          <p>Strategically positioned in Dubai and Sharjah to bridge international cargo flows across key worldwide destinations.</p>
+          <p>Strategically positioned in Dubai to bridge international cargo flows across key worldwide destinations.</p>
         </div>
 
         {/* Full-Width SVG Route Map */}
@@ -26,7 +26,7 @@ export default function GlobalNetwork() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.8rem', flexWrap: 'wrap', gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
               <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: 'var(--ascs-red)', boxShadow: '0 0 15px var(--ascs-red)' }}></div>
-              <span style={{ fontSize: '1rem', fontWeight: 800, color: '#FFFFFF' }}>ORIGIN HUB: United Arab Emirates (Dubai / Sharjah)</span>
+              <span style={{ fontSize: '1rem', fontWeight: 800, color: '#FFFFFF' }}>ORIGIN HUB: United Arab Emirates (Dubai Operations Hub)</span>
             </div>
 
             <span className="eyebrow-pill" style={{ fontSize: '0.75rem' }}>
@@ -45,7 +45,7 @@ export default function GlobalNetwork() {
               {/* UAE ASCS Hub Focal Point */}
               <circle cx="560" cy="200" r="9" fill="#E52B38" />
               <circle cx="560" cy="200" r="22" stroke="rgba(229, 43, 56, 0.5)" strokeWidth="2" />
-              <text x="560" y="238" fill="#FFFFFF" fontSize="12" fontWeight="900" textAnchor="middle">UAE (DUBAI & SHARJAH)</text>
+              <text x="560" y="238" fill="#FFFFFF" fontSize="12" fontWeight="900" textAnchor="middle">UAE (DUBAI HUB)</text>
 
               {/* Trade Route Arcs */}
               {/* Route to Europe */}

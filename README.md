@@ -2,16 +2,17 @@
 
 > **"Connecting the Gulf to the World with Sovereign Precision."**
 
-Arabian Sea Clearing and Shipping L.L.C is a premier UAE-based international freight forwarding and logistics company headquartered in Sharjah, UAE. We provide comprehensive air freight, sea freight, international courier routing, and custom shipping coordination solutions designed for global commerce.
+Arabian Sea Clearing and Shipping L.L.C is a premier UAE-based international freight forwarding and logistics company headquartered in Dubai, UAE. We provide comprehensive air freight, sea freight, international courier routing, and custom shipping coordination solutions designed for global commerce.
 
 ---
 
 ## 🏢 Company Profile & Contact Information
 
-- **Legal Entity**: Arabian Sea Clearing and Shipping L.L.C
-- **Headquarters Address**: 205, Petrofac House, Al Soor, Sharjah, United Arab Emirates
-- **Telephone**: +971 6 568 6515
-- **Telefax**: +971 6 5686414
+- **Legal Entity**: Arabian Sea Clearing and Shipping L.L.C (ارابيان سي للتخليص والشحن ذ.م.م)
+- **Headquarters Address**: Naif St, Deira, Dubai, United Arab Emirates
+- **Postal Address**: P.O. Box: 27597, Dubai, UAE
+- **Telephone**: 04-2729388 (+971 4 272 9388)
+- **Telefax**: 04-2725233 (+971 4 272 5233)
 - **Core Operations**: Air Freight, Sea Freight, International Courier Routing (DHL, FedEx, Aramex, UPS)
 
 ---

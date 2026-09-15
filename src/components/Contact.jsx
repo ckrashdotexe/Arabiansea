@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Printer, Mail, Send, CheckCircle2, Building2 } from 'lucide-react';
+import { MapPin, Phone, Printer, Clock, Send, CheckCircle2, Building2, Globe } from 'lucide-react';
 import Logo from './Logo';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -8,8 +8,7 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
-    office: 'Dubai Branch (Naif St)',
-    subject: '',
+    office: 'Dubai Corporate Headquarters (Naif St, Deira)',
     message: ''
   });
   const [sent, setSent] = useState(false);
@@ -19,7 +18,7 @@ export default function Contact() {
     setSent(true);
     setTimeout(() => {
       setSent(false);
-      setFormData({ name: '', email: '', phone: '', office: 'Dubai Branch (Naif St)', subject: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', office: 'Dubai Corporate Headquarters (Naif St, Deira)', message: '' });
     }, 5000);
   };
 
@@ -28,76 +27,73 @@ export default function Contact() {
       <div className="container-full">
         <div className="section-header-wide">
           <div className="eyebrow-pill" style={{ marginBottom: '1.2rem' }}>
-            DUAL UAE OPERATIONS & DESK
+            UAE CORPORATE HEADQUARTERS & DESK
           </div>
-          <h2>Connect With Our Shipping Offices</h2>
-          <p>Direct inquiries to our Dubai and Sharjah freight operations for air cargo, ocean shipping, and express courier coordination.</p>
+          <h2>Connect With Our Shipping Operations</h2>
+          <p>Direct inquiries to our Dubai corporate headquarters for air cargo, ocean shipping, customs clearing, and express courier coordination.</p>
         </div>
 
-        {/* Dual Office Showcase Cards */}
-        <div className="offices-dual-grid" style={{ marginBottom: '3.5rem' }}>
-          {/* Dubai Office Card (from official logo/business card) */}
-          <div className="office-card-box">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.4rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                <div className="trust-icon-container" style={{ width: '46px', height: '46px' }}>
-                  <Building2 size={22} />
+        {/* Dubai Corporate Headquarters Showcase Card */}
+        <div style={{ maxWidth: '850px', margin: '0 auto 3.5rem auto' }}>
+          <div className="office-card-box" style={{ padding: '2.5rem', border: '1px solid rgba(229, 43, 56, 0.35)', background: 'linear-gradient(135deg, rgba(20, 26, 70, 0.85) 0%, rgba(8, 11, 36, 0.95) 100%)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.8rem', flexWrap: 'wrap', gap: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <div className="trust-icon-container" style={{ width: '54px', height: '54px' }}>
+                  <Building2 size={26} />
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 900, color: '#FFFFFF' }}>Dubai Branch</h3>
-                  <p style={{ fontSize: '0.82rem', color: 'var(--ascs-red)', fontWeight: 700 }}>Commercial Freight Desk</p>
+                  <h3 style={{ fontSize: '1.45rem', fontWeight: 900, color: '#FFFFFF' }}>{COMPANY_INFO.offices.dubai.name}</h3>
+                  <p style={{ fontSize: '0.88rem', color: 'var(--ascs-red)', fontWeight: 700 }}>Commercial Freight & Customs Clearing Desk</p>
                 </div>
               </div>
-              <span className="eyebrow-pill" style={{ fontSize: '0.72rem', padding: '0.35rem 0.85rem' }}>
+              <span className="eyebrow-pill" style={{ fontSize: '0.75rem', padding: '0.4rem 1rem' }}>
                 Dubai, UAE
               </span>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', fontSize: '0.92rem', color: 'var(--text-muted)' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                <MapPin size={18} style={{ color: 'var(--ascs-red)', flexShrink: 0, marginTop: '0.2rem' }} />
-                <span>{COMPANY_INFO.offices.dubai.address} ({COMPANY_INFO.offices.dubai.poBox})</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <Phone size={18} style={{ color: 'var(--ascs-red)', flexShrink: 0 }} />
-                <span>Tel: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.dubai.phone}</strong> (Intl: {COMPANY_INFO.offices.dubai.phoneIntl})</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <Printer size={18} style={{ color: 'var(--ascs-red)', flexShrink: 0 }} />
-                <span>Fax: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.dubai.fax}</strong></span>
-              </div>
-            </div>
-          </div>
-
-          {/* Sharjah Office Card (from company specifications) */}
-          <div className="office-card-box">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.4rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                <div className="trust-icon-container" style={{ width: '46px', height: '46px' }}>
-                  <Building2 size={22} />
-                </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.4rem', fontSize: '0.96rem', color: 'var(--text-muted)' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
+                <MapPin size={20} style={{ color: 'var(--ascs-red)', flexShrink: 0, marginTop: '0.2rem' }} />
                 <div>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 900, color: '#FFFFFF' }}>Sharjah Head Office</h3>
-                  <p style={{ fontSize: '0.82rem', color: 'var(--ascs-red)', fontWeight: 700 }}>Corporate Clearing & Shipping</p>
+                  <div style={{ color: '#FFFFFF', fontWeight: 700 }}>Physical Address</div>
+                  <span>{COMPANY_INFO.offices.dubai.address}</span>
+                  <div style={{ color: 'var(--ascs-red)', fontWeight: 600, fontSize: '0.85rem', marginTop: '0.2rem' }}>
+                    {COMPANY_INFO.offices.dubai.poBox}
+                  </div>
                 </div>
               </div>
-              <span className="eyebrow-pill" style={{ fontSize: '0.72rem', padding: '0.35rem 0.85rem' }}>
-                Sharjah, UAE
-              </span>
-            </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', fontSize: '0.92rem', color: 'var(--text-muted)' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                <MapPin size={18} style={{ color: 'var(--ascs-red)', flexShrink: 0, marginTop: '0.2rem' }} />
-                <span>{COMPANY_INFO.offices.sharjah.address}</span>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
+                <Phone size={20} style={{ color: 'var(--ascs-red)', flexShrink: 0, marginTop: '0.2rem' }} />
+                <div>
+                  <div style={{ color: '#FFFFFF', fontWeight: 700 }}>Direct Telephone</div>
+                  <span>Tel: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.dubai.phone}</strong></span>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-dim)', marginTop: '0.2rem' }}>
+                    Intl: {COMPANY_INFO.offices.dubai.phoneIntl}
+                  </div>
+                </div>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <Phone size={18} style={{ color: 'var(--ascs-red)', flexShrink: 0 }} />
-                <span>Tel: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.sharjah.phone}</strong></span>
+
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
+                <Printer size={20} style={{ color: 'var(--ascs-red)', flexShrink: 0, marginTop: '0.2rem' }} />
+                <div>
+                  <div style={{ color: '#FFFFFF', fontWeight: 700 }}>Facsimile (Fax)</div>
+                  <span>Fax: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.dubai.fax}</strong></span>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-dim)', marginTop: '0.2rem' }}>
+                    Intl: {COMPANY_INFO.offices.dubai.faxIntl}
+                  </div>
+                </div>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <Printer size={18} style={{ color: 'var(--ascs-red)', flexShrink: 0 }} />
-                <span>Fax: <strong style={{ color: '#FFFFFF' }}>{COMPANY_INFO.offices.sharjah.fax}</strong></span>
+
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.85rem' }}>
+                <Clock size={20} style={{ color: 'var(--ascs-red)', flexShrink: 0, marginTop: '0.2rem' }} />
+                <div>
+                  <div style={{ color: '#FFFFFF', fontWeight: 700 }}>Operations Schedule</div>
+                  <span>{COMPANY_INFO.workingHours}</span>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-dim)', marginTop: '0.2rem' }}>
+                    Emergency clearance on call
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -110,7 +106,7 @@ export default function Contact() {
               Transmit Commercial Cargo Inquiry
             </h3>
             <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
-              Our operations desks in Dubai and Sharjah respond directly to corporate shipping requests.
+              Our operations desk in Dubai responds directly to corporate shipping and freight clearing requests.
             </p>
           </div>
 
@@ -119,7 +115,7 @@ export default function Contact() {
               <CheckCircle2 size={46} style={{ color: 'var(--ascs-red)', display: 'block', margin: '0 auto 1rem auto' }} />
               <h4 style={{ fontSize: '1.4rem', fontWeight: 900, marginBottom: '0.5rem' }}>Inquiry Received</h4>
               <p style={{ color: 'var(--text-muted)', fontSize: '1rem' }}>
-                Thank you. Your inquiry has been routed to the selected UAE office. Our shipping team will follow up promptly.
+                Thank you. Your inquiry has been routed to our Dubai Headquarters shipping desk. Our team will follow up promptly.
               </p>
             </div>
           ) : (
@@ -170,15 +166,16 @@ export default function Contact() {
 
                 <div>
                   <label style={{ display: 'block', fontSize: '0.88rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
-                    Select Preferred Office Desk
+                    Routing Desk
                   </label>
                   <select 
                     style={{ width: '100%', background: 'rgba(8, 11, 36, 0.85)', border: '1px solid rgba(255, 255, 255, 0.15)', padding: '0.85rem 1.1rem', borderRadius: 'var(--radius-sm)', color: '#FFFFFF', outline: 'none' }}
                     value={formData.office}
                     onChange={(e) => setFormData({ ...formData, office: e.target.value })}
                   >
-                    <option>Dubai Branch (Naif St, Deira)</option>
-                    <option>Sharjah Head Office (Petrofac House)</option>
+                    <option>Dubai Headquarters (Naif St, Deira)</option>
+                    <option>Commercial Clearing Operations</option>
+                    <option>International Air & Sea Routing</option>
                   </select>
                 </div>
               </div>

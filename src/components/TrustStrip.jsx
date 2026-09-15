@@ -20,8 +20,8 @@ export default function TrustStrip() {
     },
     {
       icon: MapPin,
-      title: "UAE Dual Presence",
-      description: "Centrally positioned in Dubai (Naif St) & Sharjah (Petrofac House)."
+      title: "Dubai Operations Hub",
+      description: "Centrally positioned in Naif St, Deira, Dubai, UAE."
     }
   ];
 

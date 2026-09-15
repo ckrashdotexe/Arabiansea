@@ -9,6 +9,7 @@ import About from './components/About';
 import Services from './components/Services';
 import GlobalNetwork from './components/GlobalNetwork';
 import WhyUs from './components/WhyUs';
+import QuoteEnquiry from './components/QuoteEnquiry';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import QuoteModal from './components/QuoteModal';
@@ -16,6 +17,7 @@ import QuoteModal from './components/QuoteModal';
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState('Air Freight');
 
   const handleOpenQuote = () => setIsQuoteOpen(true);
   const handleCloseQuote = () => setIsQuoteOpen(false);
@@ -31,10 +33,14 @@ export default function App() {
       <main>
         <Hero onOpenQuote={handleOpenQuote} />
         <TrustStrip />
-        <About />
-        <Services onOpenQuote={handleOpenQuote} />
+        <About onOpenQuote={handleOpenQuote} />
+        <Services onOpenQuote={handleOpenQuote} onSelectService={setSelectedService} />
         <GlobalNetwork />
         <WhyUs onOpenQuote={handleOpenQuote} />
+        <QuoteEnquiry 
+          selectedService={selectedService} 
+          onServiceChange={setSelectedService} 
+        />
         <Contact />
       </main>
 

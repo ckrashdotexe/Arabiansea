@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, Building2, ShieldCheck, MapPin, Globe } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Logo from './Logo';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -7,6 +7,15 @@ export default function About({ onOpenQuote }) {
   const scrollToContact = () => {
     const el = document.getElementById('contact');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleQuoteClick = () => {
+    const el = document.getElementById('quote-enquiry');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else if (onOpenQuote) {
+      onOpenQuote();
+    }
   };
 
   return (
@@ -25,7 +34,7 @@ export default function About({ onOpenQuote }) {
                 <Logo variant="emblem" size="small" />
                 <div>
                   <div style={{ fontSize: '0.95rem', fontWeight: 900 }}>ASCS Operations</div>
-                  <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Dubai & Sharjah Strategic Hubs</div>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Dubai Operations Hub</div>
                 </div>
               </div>
             </div>
@@ -50,7 +59,7 @@ export default function About({ onOpenQuote }) {
             </p>
 
             <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginBottom: '2.2rem', lineHeight: '1.7' }}>
-              With strategic office operations in <strong>Naif St, Deira, Dubai</strong> and <strong>Petrofac House, Al Soor, Sharjah</strong>, we deliver structured cargo clearing, multimodal routing, and dedicated customer communication for commercial enterprises worldwide.
+              With centralized corporate operations in <strong>Naif St, Deira, Dubai</strong>, we deliver structured cargo clearing, multimodal routing, and dedicated customer communication for commercial enterprises worldwide.
             </p>
 
             {/* Core Value Pillars */}
@@ -75,7 +84,7 @@ export default function About({ onOpenQuote }) {
                 Contact Our Shipping Team <ArrowRight size={16} />
               </button>
 
-              <button className="btn-ascs-outline" onClick={onOpenQuote}>
+              <button className="btn-ascs-outline" onClick={handleQuoteClick}>
                 Get Immediate Quote
               </button>
             </div>

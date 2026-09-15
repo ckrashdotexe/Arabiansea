@@ -2,12 +2,24 @@ import React from 'react';
 import { Plane, Ship, Package, Globe, CheckCircle2, ArrowRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 
-export default function Services({ onOpenQuote }) {
+export default function Services({ onOpenQuote, onSelectService }) {
   const serviceIcons = {
     Plane: Plane,
     Ship: Ship,
     Package: Package,
     Globe: Globe
+  };
+
+  const handleServiceQuote = (serviceTitle) => {
+    if (onSelectService) {
+      onSelectService(serviceTitle);
+    }
+    const el = document.getElementById('quote-enquiry');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else if (onOpenQuote) {
+      onOpenQuote();
+    }
   };
 
   return (
@@ -78,7 +90,7 @@ export default function Services({ onOpenQuote }) {
                   <button 
                     className="btn-ascs-outline" 
                     style={{ width: '100%', justifyContent: 'center', marginTop: '1.8rem' }}
-                    onClick={onOpenQuote}
+                    onClick={() => handleServiceQuote(svc.title)}
                   >
                     Request {svc.title} Quote <ArrowRight size={16} />
                   </button>

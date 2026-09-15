@@ -1,12 +1,21 @@
 import React from 'react';
-import { ShieldCheck, Compass, Anchor, Clock, ArrowRight, Building2, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Compass, Anchor, Clock, ArrowRight } from 'lucide-react';
 
 export default function WhyUs({ onOpenQuote }) {
+  const handleQuoteClick = () => {
+    const el = document.getElementById('quote-enquiry');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else if (onOpenQuote) {
+      onOpenQuote();
+    }
+  };
+
   const pillars = [
     {
       icon: Compass,
       title: "Sovereign Gulf Precision",
-      description: "Rooted in Sharjah, UAE, bringing structured freight handling and regional logistics expertise to global shipping."
+      description: "Rooted in Dubai, UAE, bringing structured freight handling and regional logistics expertise to global shipping."
     },
     {
       icon: ShieldCheck,
@@ -26,10 +35,10 @@ export default function WhyUs({ onOpenQuote }) {
   ];
 
   return (
-    <section id="why-us" className="section-padding">
-      <div className="container">
-        <div className="section-header">
-          <div className="eyebrow-badge" style={{ marginBottom: '1rem' }}>
+    <section id="why-us" className="section-padding-wide">
+      <div className="container-full">
+        <div className="section-header-wide">
+          <div className="eyebrow-pill" style={{ marginBottom: '1.2rem' }}>
             WHY ARABIAN SEA SHIPPING
           </div>
           <h2>Engineered for Business Trade Reliability.</h2>
@@ -40,16 +49,16 @@ export default function WhyUs({ onOpenQuote }) {
           {pillars.map((item, idx) => {
             const IconComponent = item.icon;
             return (
-              <div key={idx} className="glass-card" style={{ padding: '2.2rem' }}>
-                <div className="trust-icon-box" style={{ marginBottom: '1.5rem' }}>
+              <div key={idx} className="ascs-glass-panel" style={{ padding: '2.5rem' }}>
+                <div className="trust-icon-container" style={{ width: '56px', height: '56px', marginBottom: '1.5rem' }}>
                   <IconComponent size={26} />
                 </div>
 
-                <h3 style={{ fontSize: '1.3rem', fontWeight: '800', marginBottom: '0.8rem', color: '#fff' }}>
+                <h3 style={{ fontSize: '1.35rem', fontWeight: '900', marginBottom: '0.8rem', color: '#FFFFFF' }}>
                   {item.title}
                 </h3>
 
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', lineHeight: '1.65' }}>
                   {item.description}
                 </p>
               </div>
@@ -58,15 +67,15 @@ export default function WhyUs({ onOpenQuote }) {
         </div>
 
         {/* Call to Action Banner */}
-        <div className="glass-card" style={{ padding: '3rem', background: 'linear-gradient(135deg, var(--bg-navy-mid) 0%, var(--bg-dark) 100%)', borderColor: 'var(--border-gold-bright)', textAlign: 'center' }}>
-          <h3 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1rem', color: '#fff' }}>
+        <div className="ascs-glass-panel" style={{ padding: '3rem', textAlign: 'center', borderColor: 'var(--ascs-red)' }}>
+          <h3 style={{ fontSize: '2rem', fontWeight: '900', marginBottom: '1rem', color: '#FFFFFF' }}>
             Ready to Discuss Your International Shipment?
           </h3>
           <p style={{ color: 'var(--text-muted)', maxWidth: '650px', margin: '0 auto 2rem auto', fontSize: '1.05rem' }}>
-            Contact our Sharjah headquarters today to receive professional rate coordination for your air, sea, or express courier cargo.
+            Contact our Dubai corporate headquarters today to receive professional rate coordination for your air, sea, or express courier cargo.
           </p>
 
-          <button className="btn-primary-gold" onClick={onOpenQuote}>
+          <button className="btn-ascs-red" onClick={handleQuoteClick}>
             Request Shipping Rate Quote <ArrowRight size={18} />
           </button>
         </div>

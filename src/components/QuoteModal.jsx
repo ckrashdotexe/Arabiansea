@@ -10,7 +10,7 @@ export default function QuoteModal({ isOpen, onClose }) {
     email: '',
     phone: '',
     mode: 'Air Freight',
-    origin: 'UAE (Dubai / Sharjah)',
+    origin: 'UAE (Dubai)',
     destination: '',
     weight: '',
     description: ''
@@ -31,7 +31,7 @@ export default function QuoteModal({ isOpen, onClose }) {
         email: '',
         phone: '',
         mode: 'Air Freight',
-        origin: 'UAE (Dubai / Sharjah)',
+        origin: 'UAE (Dubai)',
         destination: '',
         weight: '',
         description: ''
@@ -55,7 +55,7 @@ export default function QuoteModal({ isOpen, onClose }) {
             Request Commercial Freight Quote
           </h3>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>
-            Direct routing to our Dubai & Sharjah shipping operations desks.
+            Direct routing to our Dubai corporate freight operations desk.
           </p>
         </div>
 

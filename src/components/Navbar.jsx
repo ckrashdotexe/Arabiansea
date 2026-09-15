@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, ChevronRight, Phone, MapPin } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronRight, MapPin, Clock } from 'lucide-react';
 import Logo from './Logo';
 import { COMPANY_INFO } from '../data/companyData';
 
@@ -21,6 +21,7 @@ export default function Navbar({ activeSection, setActiveSection, onOpenQuote })
     { id: 'about', label: 'About' },
     { id: 'network', label: 'Global Network' },
     { id: 'why-us', label: 'Why Us' },
+    { id: 'quote-enquiry', label: 'Freight Quote' },
     { id: 'contact', label: 'Offices & Contact' }
   ];
 
@@ -33,6 +34,16 @@ export default function Navbar({ activeSection, setActiveSection, onOpenQuote })
     }
   };
 
+  const handleQuoteClick = () => {
+    setMobileOpen(false);
+    const el = document.getElementById('quote-enquiry');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else if (onOpenQuote) {
+      onOpenQuote();
+    }
+  };
+
   return (
     <>
       {/* Top Corporate Micro-Bar */}
@@ -41,16 +52,16 @@ export default function Navbar({ activeSection, setActiveSection, onOpenQuote })
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.8rem', flexWrap: 'wrap' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
               <MapPin size={13} style={{ color: 'var(--ascs-red)' }} />
-              Dubai: Naif St, Deira | Tel: {COMPANY_INFO.offices.dubai.phone}
+              Dubai HQ: Naif St, Deira | Tel: {COMPANY_INFO.offices.dubai.phone}
             </span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-              <MapPin size={13} style={{ color: 'var(--ascs-red)' }} />
-              Sharjah: Petrofac House | Tel: {COMPANY_INFO.offices.sharjah.phone}
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)' }}>
+              <Clock size={13} style={{ color: 'var(--ascs-red)' }} />
+              {COMPANY_INFO.workingHours}
             </span>
           </div>
 
           <div className="top-info-arabic">
-            ارابيان سي للتخليص والشحن ذ.م.م
+            {COMPANY_INFO.nameArabic}
           </div>
         </div>
       </div>
@@ -92,7 +103,7 @@ export default function Navbar({ activeSection, setActiveSection, onOpenQuote })
 
           {/* Right Action CTA & Mobile Hamburger */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <button className="btn-ascs-red" onClick={onOpenQuote}>
+            <button className="btn-ascs-red" onClick={handleQuoteClick}>
               Request a Quote <ArrowRight size={16} />
             </button>
 
@@ -134,16 +145,13 @@ export default function Navbar({ activeSection, setActiveSection, onOpenQuote })
               <button 
                 className="btn-ascs-red" 
                 style={{ width: '100%', justifyContent: 'center' }}
-                onClick={() => {
-                  setMobileOpen(false);
-                  onOpenQuote();
-                }}
+                onClick={handleQuoteClick}
               >
                 Request a Quote <ArrowRight size={16} />
               </button>
 
               <div style={{ marginTop: '1.2rem', fontSize: '0.82rem', color: 'var(--text-dim)', textAlign: 'center' }}>
-                Dubai: 04-2729388 • Sharjah: +971 6 568 6515
+                Dubai HQ: 04-2729388 • Naif St, Deira, UAE
               </div>
             </div>
           </div>
