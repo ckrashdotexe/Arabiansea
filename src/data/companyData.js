@@ -67,7 +67,8 @@ export const COMPANY_INFO = {
         "Major international carrier choices",
         "Commercial documentation handling"
       ],
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
+      
     },
     {
       id: "custom-shipping",
@@ -82,7 +83,7 @@ export const COMPANY_INFO = {
         "International routing",
         "Business logistics support"
       ],
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80"  
     }
   ],
 
