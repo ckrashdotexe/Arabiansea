@@ -51,7 +51,7 @@ export const COMPANY_INFO = {
         "International sea routes",
         "Cost-efficient transportation"
       ],
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
     },
     {
       id: "international-courier",
@@ -67,7 +67,7 @@ export const COMPANY_INFO = {
         "Major international carrier choices",
         "Commercial documentation handling"
       ],
-      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1200&q=80"
     },
     {
       id: "custom-shipping",
