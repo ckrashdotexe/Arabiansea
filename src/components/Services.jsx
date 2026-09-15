@@ -15,7 +15,7 @@ export default function Services({ onOpenQuote }) {
         "Flexible shipping solutions"
       ],
       ctaText: "Explore Air Freight",
-      image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1000&q=80"
     },
     {
       number: "02",
@@ -29,7 +29,7 @@ export default function Services({ onOpenQuote }) {
         "Cost-efficient transportation"
       ],
       ctaText: "Explore Sea Freight",
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1000&q=80"
     },
     {
       number: "03",
@@ -39,12 +39,12 @@ export default function Services({ onOpenQuote }) {
       carriers: ["DHL", "FedEx", "Aramex", "UPS"],
       features: [
         "Express document & parcel routing",
-        "Door-to-door courier dispatch",
+        "Door-to-door courier coordination",
         "Major international carrier choices",
         "Commercial documentation handling"
       ],
       ctaText: "Send a Shipment",
-      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80"
     },
     {
       number: "04",
@@ -58,12 +58,12 @@ export default function Services({ onOpenQuote }) {
         "Business logistics support"
       ],
       ctaText: "Discuss Your Requirement",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
   return (
-    <section id="services" className="section-padding">
+    <section id="services" className="section-padding" style={{ position: 'relative' }}>
       <div className="container">
         <div className="section-header">
           <div className="eyebrow-badge" style={{ marginBottom: '1rem' }}>
@@ -78,52 +78,64 @@ export default function Services({ onOpenQuote }) {
             const IconComponent = svc.icon;
             return (
               <div key={svc.number} className="service-card-large">
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-                    <div className="trust-icon-box" style={{ width: '56px', height: '56px' }}>
-                      <IconComponent size={28} />
+                {/* Background Image Layer with Dark Overlay */}
+                <img 
+                  src={svc.image} 
+                  alt={svc.title} 
+                  className="service-card-bg-img"
+                  loading="lazy" 
+                />
+                <div className="service-card-overlay-vignette"></div>
+
+                {/* Foreground Content */}
+                <div className="service-card-content">
+                  <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.8rem' }}>
+                      <div className="trust-icon-box" style={{ width: '56px', height: '56px' }}>
+                        <IconComponent size={28} />
+                      </div>
+                      <span style={{ fontSize: '0.85rem', fontWeight: '800', color: 'var(--gold-light)', letterSpacing: '0.12em' }}>
+                        SERVICE {svc.number}
+                      </span>
                     </div>
-                    <span style={{ fontSize: '0.85rem', fontWeight: '800', color: 'var(--gold-primary)', letterSpacing: '0.1em' }}>
-                      SERVICE {svc.number}
-                    </span>
+
+                    <h3 style={{ fontSize: '1.75rem', fontWeight: '800', marginBottom: '0.9rem', color: '#fff' }}>
+                      {svc.title}
+                    </h3>
+
+                    <p style={{ color: 'var(--text-muted)', fontSize: '1rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                      {svc.description}
+                    </p>
+
+                    {/* Carrier Pill Badges for International Courier */}
+                    {svc.carriers && (
+                      <div className="carrier-badges-row">
+                        {svc.carriers.map((carrier, cIdx) => (
+                          <span key={cIdx} className="carrier-badge-pill">
+                            {carrier}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', margin: '1.5rem 0' }}>
+                      {svc.features.map((feat, fIdx) => (
+                        <li key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontSize: '0.92rem', color: '#fff' }}>
+                          <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  <h3 style={{ fontSize: '1.6rem', fontWeight: '800', marginBottom: '0.8rem', color: '#fff' }}>
-                    {svc.title}
-                  </h3>
-
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-                    {svc.description}
-                  </p>
-
-                  {/* Optional Carrier Text Badges for International Courier */}
-                  {svc.carriers && (
-                    <div className="carrier-badges-row">
-                      {svc.carriers.map((carrier, cIdx) => (
-                        <span key={cIdx} className="carrier-badge-pill">
-                          {carrier}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '2rem' }}>
-                    {svc.features.map((feat, fIdx) => (
-                      <li key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
-                        <CheckCircle2 size={16} style={{ color: 'var(--gold-primary)', flexShrink: 0 }} />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <button 
+                    className="btn-secondary-outline" 
+                    style={{ width: '100%', justifyContent: 'center', marginTop: '1.5rem' }}
+                    onClick={onOpenQuote}
+                  >
+                    {svc.ctaText} <ArrowRight size={16} />
+                  </button>
                 </div>
-
-                <button 
-                  className="btn-secondary-outline" 
-                  style={{ width: '100%', justifyContent: 'center' }}
-                  onClick={onOpenQuote}
-                >
-                  {svc.ctaText} <ArrowRight size={16} />
-                </button>
               </div>
             );
           })}
