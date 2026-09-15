@@ -1,0 +1,25 @@
+<svg width="200" height="210" viewBox="0 0 200 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="85" r="76" stroke="#FFFFFF" stroke-width="3.5" fill="#1b2259" />
+  <path d="M 28 65 Q 100 45 172 65" stroke="#FFFFFF" stroke-width="2.5" fill="none" />
+  <line x1="64" y1="20" x2="64" y2="60" stroke="#FFFFFF" stroke-width="2.5" />
+  <line x1="100" y1="10" x2="100" y2="55" stroke="#FFFFFF" stroke-width="2.5" />
+  <line x1="136" y1="20" x2="136" y2="60" stroke="#FFFFFF" stroke-width="2.5" />
+  <text x="46" y="46" fill="#FFFFFF" font-size="18" font-weight="900" font-family="sans-serif" text-anchor="middle">A</text>
+  <text x="82" y="38" fill="#FFFFFF" font-size="18" font-weight="900" font-family="sans-serif" text-anchor="middle">S</text>
+  <text x="118" y="38" fill="#FFFFFF" font-size="18" font-weight="900" font-family="sans-serif" text-anchor="middle">C</text>
+  <text x="154" y="46" fill="#FFFFFF" font-size="18" font-weight="900" font-family="sans-serif" text-anchor="middle">S</text>
+  <path d="M 100 10 C 60 40 60 130 100 160" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.6" />
+  <path d="M 100 10 C 140 40 140 130 100 160" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.6" />
+  <path d="M 30 100 Q 100 85 170 100" stroke="#FFFFFF" stroke-width="1.5" fill="none" opacity="0.5" />
+  <path d="M 88 56 L 90 42 L 100 36 L 110 42 L 112 56 Z" fill="#1b2259" stroke="#FFFFFF" stroke-width="2.5" />
+  <line x1="100" y1="36" x2="100" y2="28" stroke="#FFFFFF" stroke-width="2.5" />
+  <line x1="94" y1="32" x2="106" y2="32" stroke="#FFFFFF" stroke-width="2" />
+  <rect x="80" y="56" width="40" height="24" rx="2" fill="#1b2259" stroke="#FFFFFF" stroke-width="2.5" />
+  <line x1="84" y1="64" x2="116" y2="64" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="3 2" />
+  <path d="M 72 80 L 128 80 L 118 126 L 100 138 L 82 126 Z" fill="#1b2259" stroke="#FFFFFF" stroke-width="3" />
+  <line x1="100" y1="80" x2="100" y2="136" stroke="#FFFFFF" stroke-width="3" />
+  <path d="M 78 98 L 100 106 L 122 98" stroke="#FFFFFF" stroke-width="2.5" fill="none" />
+  <path d="M 46 142 Q 64 134 82 142 Q 100 134 118 142 Q 136 134 154 142" stroke="#FFFFFF" stroke-width="2.5" fill="none" />
+  <path d="M 52 152 Q 68 144 84 152 Q 100 144 116 152 Q 132 144 148 152" stroke="#FFFFFF" stroke-width="2.5" fill="none" />
+  <path d="M 60 162 Q 74 156 88 162 Q 100 156 112 162 Q 126 156 140 162" stroke="#FFFFFF" stroke-width="2.5" fill="none" />
+</svg>

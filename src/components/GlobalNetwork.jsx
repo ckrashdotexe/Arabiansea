@@ -4,83 +4,83 @@ import { Globe, Navigation, Compass, MapPin } from 'lucide-react';
 export default function GlobalNetwork() {
   const tradeLanes = [
     { region: "Middle East & GCC", route: "Direct Overland & Feeder Links" },
-    { region: "Europe", route: "Air & Ocean Cargo Gateways" },
-    { region: "Asia & Subcontinent", route: "Transshipment Trade Corridors" },
-    { region: "Africa", route: "East & West Ocean Routes" },
-    { region: "The Americas", route: "Transatlantic & Transpacific Interline" }
+    { region: "Europe & UK", route: "Major Air Cargo & Ocean Container Hubs" },
+    { region: "Asia & Subcontinent", route: "Primary Transshipment Corridors" },
+    { region: "Africa", route: "East & Southern Maritime Routes" },
+    { region: "The Americas", route: "Intercontinental Air & Ocean Links" }
   ];
 
   return (
-    <section className="network-section-dark">
-      <div className="container">
-        <div className="section-header">
-          <div className="eyebrow-badge" style={{ marginBottom: '1rem' }}>
+    <section id="network" className="section-padding-wide network-world-fullscreen">
+      <div className="container-full">
+        <div className="section-header-wide">
+          <div className="eyebrow-pill" style={{ marginBottom: '1.2rem' }}>
             GLOBAL CONNECTIVITY
           </div>
-          <h2 style={{ fontSize: '2.8rem' }}>From Sharjah to Global Markets.</h2>
-          <p>Strategically positioned in the United Arab Emirates to connect your commercial shipments across international trade corridors.</p>
+          <h2>From the UAE to Global Trade Corridors.</h2>
+          <p>Strategically positioned in Dubai and Sharjah to bridge international cargo flows across key worldwide destinations.</p>
         </div>
 
-        {/* World Map SVG with Animated Glowing Gulf Route Lines */}
-        <div className="world-map-svg-container">
-          <div style={{ display: 'flex', justifyContent: 'between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-              <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: 'var(--gold-light)', boxShadow: '0 0 10px var(--gold-primary)' }}></div>
-              <span style={{ fontSize: '0.9rem', fontWeight: '700', color: '#fff' }}>ORIGIN HUB: Sharjah (UAE)</span>
+        {/* Full-Width SVG Route Map */}
+        <div className="world-map-svg-wide">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.8rem', flexWrap: 'wrap', gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+              <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: 'var(--ascs-red)', boxShadow: '0 0 15px var(--ascs-red)' }}></div>
+              <span style={{ fontSize: '1rem', fontWeight: 800, color: '#FFFFFF' }}>ORIGIN HUB: United Arab Emirates (Dubai / Sharjah)</span>
             </div>
 
-            <span className="eyebrow-badge" style={{ fontSize: '0.7rem' }}>
-              Multimodal International Network
+            <span className="eyebrow-pill" style={{ fontSize: '0.75rem' }}>
+              International Multimodal Network
             </span>
           </div>
 
-          <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-md)', background: 'rgba(6, 10, 23, 0.9)', padding: '2rem 1rem' }}>
-            <svg viewBox="0 0 900 450" fill="none" style={{ width: '100%', height: 'auto' }}>
-              {/* Simplified Stylized World Continents Background Shapes */}
-              <path d="M 120 120 Q 200 80 280 140 T 200 240 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" />
-              <path d="M 400 100 Q 520 70 580 140 T 450 220 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" />
-              <path d="M 600 130 Q 750 90 840 180 T 700 300 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" />
-              <path d="M 460 240 Q 540 250 520 380 T 440 320 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.08)" />
+          <div style={{ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-md)', background: 'rgba(8, 11, 36, 0.95)', padding: '2.5rem 1.5rem', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+            <svg viewBox="0 0 1000 480" fill="none" style={{ width: '100%', height: 'auto' }}>
+              {/* Stylized Continents */}
+              <path d="M 120 120 Q 220 80 300 150 T 220 260 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.1)" />
+              <path d="M 440 100 Q 560 70 630 140 T 490 230 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.1)" />
+              <path d="M 660 130 Q 820 90 920 180 T 780 320 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.1)" />
+              <path d="M 500 250 Q 600 260 570 400 T 480 340 Z" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.1)" />
 
-              {/* UAE / Sharjah Hub Focal Node */}
-              <circle cx="510" cy="190" r="8" fill="#E5C158" className="anim-pulse" />
-              <circle cx="510" cy="190" r="18" stroke="rgba(229, 193, 88, 0.4)" strokeWidth="1.5" />
-              <text x="510" y="222" fill="#E5C158" fontSize="11" fontWeight="800" textAnchor="middle">SHARJAH, UAE</text>
+              {/* UAE ASCS Hub Focal Point */}
+              <circle cx="560" cy="200" r="9" fill="#E52B38" />
+              <circle cx="560" cy="200" r="22" stroke="rgba(229, 43, 56, 0.5)" strokeWidth="2" />
+              <text x="560" y="238" fill="#FFFFFF" fontSize="12" fontWeight="900" textAnchor="middle">UAE (DUBAI & SHARJAH)</text>
 
-              {/* Route Arcs Originating from Sharjah */}
+              {/* Trade Route Arcs */}
               {/* Route to Europe */}
-              <path d="M 510 190 Q 450 130 430 110" stroke="var(--gold-primary)" strokeWidth="2" strokeDasharray="4 4" />
-              <circle cx="430" cy="110" r="4" fill="#F8FAFC" />
-              <text x="410" y="100" fill="#94A3B8" fontSize="10" fontWeight="600">EUROPE</text>
+              <path d="M 560 200 Q 480 130 460 110" stroke="#E52B38" strokeWidth="2.5" strokeDasharray="5 5" />
+              <circle cx="460" cy="110" r="5" fill="#FFFFFF" />
+              <text x="440" y="98" fill="#CBD5E1" fontSize="11" fontWeight="700">EUROPE</text>
 
               {/* Route to Asia */}
-              <path d="M 510 190 Q 640 150 720 160" stroke="var(--gold-primary)" strokeWidth="2" strokeDasharray="4 4" />
-              <circle cx="720" cy="160" r="4" fill="#F8FAFC" />
-              <text x="730" y="165" fill="#94A3B8" fontSize="10" fontWeight="600">ASIA</text>
+              <path d="M 560 200 Q 720 150 820 170" stroke="#E52B38" strokeWidth="2.5" strokeDasharray="5 5" />
+              <circle cx="820" cy="170" r="5" fill="#FFFFFF" />
+              <text x="830" y="175" fill="#CBD5E1" fontSize="11" fontWeight="700">ASIA-PACIFIC</text>
 
               {/* Route to Africa */}
-              <path d="M 510 190 Q 480 260 480 320" stroke="var(--gold-primary)" strokeWidth="2" strokeDasharray="4 4" />
-              <circle cx="480" cy="320" r="4" fill="#F8FAFC" />
-              <text x="490" y="335" fill="#94A3B8" fontSize="10" fontWeight="600">AFRICA</text>
+              <path d="M 560 200 Q 530 290 530 350" stroke="#E52B38" strokeWidth="2.5" strokeDasharray="5 5" />
+              <circle cx="530" cy="350" r="5" fill="#FFFFFF" />
+              <text x="540" y="368" fill="#CBD5E1" fontSize="11" fontWeight="700">AFRICA</text>
 
               {/* Route to Americas */}
-              <path d="M 510 190 Q 300 120 200 160" stroke="var(--gold-primary)" strokeWidth="2" strokeDasharray="4 4" />
-              <circle cx="200" cy="160" r="4" fill="#F8FAFC" />
-              <text x="180" y="150" fill="#94A3B8" fontSize="10" fontWeight="600">AMERICAS</text>
+              <path d="M 560 200 Q 320 120 220 170" stroke="#E52B38" strokeWidth="2.5" strokeDasharray="5 5" />
+              <circle cx="220" cy="170" r="5" fill="#FFFFFF" />
+              <text x="200" y="158" fill="#CBD5E1" fontSize="11" fontWeight="700">AMERICAS</text>
 
-              {/* Route to Middle East / GCC */}
-              <path d="M 510 190 Q 540 210 570 200" stroke="var(--gold-primary)" strokeWidth="2" />
-              <circle cx="570" cy="200" r="4" fill="#F8FAFC" />
-              <text x="580" y="215" fill="#94A3B8" fontSize="10" fontWeight="600">GCC & MIDDLE EAST</text>
+              {/* Route to GCC & Middle East */}
+              <path d="M 560 200 Q 600 225 640 215" stroke="#FFFFFF" strokeWidth="2.5" />
+              <circle cx="640" cy="215" r="5" fill="#E52B38" />
+              <text x="650" y="232" fill="#CBD5E1" fontSize="11" fontWeight="700">GCC & MIDDLE EAST</text>
             </svg>
           </div>
 
-          {/* Trade Lanes Bar */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
+          {/* Trade Lanes Ticker */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.2rem', marginTop: '2.5rem' }}>
             {tradeLanes.map((tl, idx) => (
-              <div key={idx} style={{ background: 'rgba(6, 10, 23, 0.6)', padding: '0.8rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-glass)' }}>
-                <div style={{ fontSize: '0.8rem', color: 'var(--gold-light)', fontWeight: '700' }}>{tl.region}</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>{tl.route}</div>
+              <div key={idx} style={{ background: 'rgba(8, 11, 36, 0.75)', padding: '1rem 1.2rem', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                <div style={{ fontSize: '0.92rem', color: '#FFFFFF', fontWeight: 800 }}>{tl.region}</div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: '0.2rem' }}>{tl.route}</div>
               </div>
             ))}
           </div>

@@ -6,37 +6,37 @@ export default function TrustStrip() {
     {
       icon: Globe,
       title: "Global Reach",
-      description: "International logistics connectivity"
+      description: "Comprehensive air, ocean, and ground freight connectivity across worldwide trade lanes."
     },
     {
       icon: Layers,
       title: "Multimodal Freight",
-      description: "Air + Sea + Courier"
+      description: "Integrated Air Freight + Sea Freight + Express International Courier solutions."
     },
     {
       icon: Truck,
-      title: "Trusted Carriers",
-      description: "DHL • FedEx • Aramex • UPS"
+      title: "Major Carriers",
+      description: "Coordinating with leading courier networks: DHL • FedEx • Aramex • UPS."
     },
     {
       icon: MapPin,
-      title: "Sharjah Based",
-      description: "Strategically positioned in the UAE"
+      title: "UAE Dual Presence",
+      description: "Centrally positioned in Dubai (Naif St) & Sharjah (Petrofac House)."
     }
   ];
 
   return (
-    <div className="trust-strip-wrapper">
-      <div className="container">
-        <div className="trust-strip-container">
+    <div className="trust-strip-fullscreen">
+      <div className="container-full">
+        <div className="trust-grid-full">
           {items.map((item, idx) => {
             const IconComp = item.icon;
             return (
-              <div key={idx} className="trust-item">
-                <div className="trust-icon-box">
-                  <IconComp size={24} />
+              <div key={idx} className="trust-item-box">
+                <div className="trust-icon-container">
+                  <IconComp size={26} />
                 </div>
-                <div className="trust-text">
+                <div className="trust-info">
                   <h4>{item.title}</h4>
                   <p>{item.description}</p>
                 </div>
